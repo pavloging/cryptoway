@@ -1,0 +1,4 @@
+/cryptoway-api/node_modules
+/cryptoway-bot/node_modules
+.idea
+.DS_Store

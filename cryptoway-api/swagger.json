@@ -1,0 +1,88 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Coins API",
+        "description": "This is cryptoway-api",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "tags": [
+        {
+          "name": "Coins",
+          "description": "Everything about your Coins"
+        }
+      ],
+    "paths": {
+        "/api/status": {
+            "get": {
+                "description": "Cheack status - Проверка работоспособности",
+                "parameters": [],
+                "tags": [
+                    "Coins"
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "boolean"
+                    }
+                }
+            }
+        }, 
+        "/api/coins/all": {
+            "get": {
+                "description": "Coins All -  Получение всех coins",
+                "parameters": [],
+                "tags": [
+                    "Coins"
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "Array<object>"
+                    }
+                }
+            }
+        }, 
+        "/api/coins?coins=bitcoin": {
+            "get": {
+                "description": "Select Coins -  Получение выбранных coins",
+                "parameters": [],
+                "tags": [
+                    "Coins"
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "Array<object>"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Coin": {
+            "type": "object",
+            "properties": {
+                "rank": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "key": {
+                    "type": "string",
+                    "example": "bitcoin"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Bitcoin"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "coin"
+                },
+                "price": {
+                    "type": "object",
+                    "example": { "USD": 30000, "BTC": 1, "ETH": 18 }
+                }
+            }
+        }
+    }
+}
