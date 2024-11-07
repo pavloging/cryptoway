@@ -35,6 +35,8 @@ composer.command("coins", async (ctx) => {
             arr.push(data);
         });
         const mes = ctx.t('seeActive') + '\n' + arr.join("\n");
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         await ctx.reply(mes, { parse_mode: "HTML", disable_web_page_preview: true });
     } catch (error) {
         console.error(error);
