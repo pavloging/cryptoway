@@ -12,7 +12,7 @@ import { composer as coinsCommand } from "./composers/commands/coins.command.js"
 import { composer as startCallback } from "./composers/callbacks/start.callback.js";
 import { composer as settingsCallback } from "./composers/callbacks/settings.callback.js";
 import { composer as noneMessage } from "./composers/messages/none.messages.js";
-import { i18n, limitMiddleware } from "./plugins/index.js";
+import { i18nMiddleware, limitMiddleware } from "./plugins/index.js";
 import { setCheckCoins } from "./untils/setCheckCoins.js";
 
 if (!process.env.TOKEN) throw new Error("invalided token");
@@ -23,7 +23,7 @@ const bot = new Bot<ContextType>(process.env.TOKEN);
 setMyCommands(bot);
 
 // Plugins
-bot.use(i18n);
+bot.use(i18nMiddleware);
 bot.use(limitMiddleware)
 
 bot.use(session({

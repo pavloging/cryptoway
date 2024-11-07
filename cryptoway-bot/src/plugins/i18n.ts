@@ -6,4 +6,4 @@ export const i18n = new I18n<ContextType>({
     directory: "./src/locales",
 });
 
-// export const i18nMiddleware = i18n.middleware()
+export const i18nMiddleware = i18n.middleware()
