@@ -3,7 +3,7 @@ import { ContextType } from "../types/index.js";
 
 export const i18n = new I18n<ContextType>({
     defaultLocale: "en",
-    directory: "../locales",
+    directory: "./src/locales",
 });
 
-export const i18nMiddleware = i18n.middleware()
+// export const i18nMiddleware = i18n.middleware()
