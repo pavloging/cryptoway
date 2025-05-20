@@ -14,23 +14,24 @@
     "license": "ISC",
     "devDependencies": {
         "@grammyjs/types": "^3.3.0",
-        "@types/node": "^20.8.7",
+        "@types/node": "^20.17.48",
         "@types/node-cron": "^3.0.10",
         "@types/pg": "^8.10.7",
         "@typescript-eslint/eslint-plugin": "^6.8.0",
         "@typescript-eslint/parser": "^6.8.0",
         "eslint": "^8.52.0",
-        "nodemon": "^3.0.1",
+        "nodemon": "^3.1.10",
         "rimraf": "^5.0.5",
-        "typescript": "^5.2.2"
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
     },
     "dependencies": {
         "@grammyjs/i18n": "^1.0.1",
         "@grammyjs/ratelimiter": "^1.2.0",
-        "@grammyjs/storage-free": "^2.4.0",
+        "@grammyjs/storage-free": "^2.5.1",
         "axios": "^1.5.1",
         "dotenv": "^16.3.1",
-        "grammy": "^1.19.2",
+        "grammy": "^1.36.1",
         "node-cron": "^3.0.2",
         "pg": "^8.11.3"
     }
